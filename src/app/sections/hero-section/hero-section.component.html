@@ -1,0 +1,12 @@
+<section id="hero" class="text-center bg-gray-900 py-20 text-white relative overflow-hidden flex flex-col justify-center items-center">
+    <!-- Canvas for Grid Animation -->
+    <canvas #webCanvas id="webCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
+
+    <div class="relative z-10">
+        <h2 #heroText class="text-4xl font-bold opacity-0 translate-y-10">Welcome to My Portfolio</h2>
+        <p #heroSubText class="mt-4 text-lg opacity-0 translate-y-10">I am a Full Stack Developer specializing in Tailwind CSS, Laravel, and Angular.</p>
+        <a #ctaButton href="#" (click)="scrollToSection('projects', $event)" class="mt-6 inline-block bg-white backdrop-blur-lg text-gray-800 px-6 py-2 rounded-lg font-semibold hover:bg-gray-200 opacity-0 scale-75 transition-transform">
+            View Projects
+        </a>
+    </div>
+</section>

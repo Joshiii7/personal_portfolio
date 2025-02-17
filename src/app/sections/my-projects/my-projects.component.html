@@ -1,0 +1,65 @@
+<section id="projects" class="py-16 bg-gray-100 dark:bg-gray-800">
+    <div class="container mx-auto lg:px-[10rem] px-5">
+        <h2 class="text-3xl font-bold text-center">Projects</h2>
+
+        <!-- Navigation Bar -->
+        <div class="relative h-[3rem] flex flex-row justify-between bg-white dark:bg-gray-900 shadow-inner-custom border border-gray-100 dark:border-gray-900 rounded-lg lg:items-center gap-2 lg:p-4 w-full mt-6">
+            <!-- Sliding Indicator -->
+            <div
+                class="absolute top-0 left-0 h-[3rem] bg-gray-300 dark:bg-gray-800 border border-2 border-gray-300 rounded-lg transition-transform duration-300 ease-in-out"
+                [ngStyle]="{'transform': 'translateX(' + (currentTab - 1) * 100 + '%)', 'width': '33.33%'}">
+            </div>
+        
+            <!-- Tabs -->
+            <ul class="flex flex-row text-sm font-medium text-center w-full gap-2 relative z-10">
+                <li class="w-[33.33%]" role="tab">
+                    <button
+                        (click)="tabIndex(1)"
+                        class="text-sm lg:text-md font-bold h-10 px-4 py-1 flex flex-col justify-center items-center w-full rounded-3xl relative">
+                        Application Projects
+                    </button>
+                </li>
+                <li class="w-[33.33%]" role="tab">
+                    <button
+                        (click)="tabIndex(2)"
+                        class="text-sm lg:text-md font-bold h-10 px-4 py-1 flex flex-col justify-center items-center w-full rounded-3xl relative">
+                        Mini CSS Projects
+                    </button>
+                </li>
+                <li class="w-[33.33%]" role="tab">
+                    <button
+                        (click)="tabIndex(3)"
+                        class="text-sm lg:text-md font-bold h-10 px-4 py-1 flex flex-col justify-center items-center w-full rounded-3xl relative">
+                        JS Projects
+                    </button>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- Projects -->
+        <div *ngIf="currentTab === 1" class="grid md:grid-cols-3 gap-6 mt-8">
+            <div *ngFor="let project of applicationProjects" class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md cursor-pointer transition transform hover:-translate-y-2 hover:bg-gray-200 hover:dark:bg-gray-700">
+                <img [src]="project.image" alt="{{ project.title }}" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4 text-gray-900 dark:text-white">{{ project.title }}</h3>
+                <p class="text-gray-900 dark:text-gray-400 font-medium">{{ project.description }}</p>
+            </div>
+        </div>
+    
+        <div *ngIf="currentTab === 2" class="grid md:grid-cols-3 gap-6 mt-8">
+            <div *ngFor="let project of miniCSSProjects" class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md cursor-pointer transition transform hover:-translate-y-2 hover:bg-gray-200 hover:dark:bg-gray-700">
+                <img [src]="project.image" alt="{{ project.title }}" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4 text-gray-900 dark:text-white">{{ project.title }}</h3>
+                <p class="text-gray-900 dark:text-gray-400 font-medium">{{ project.description }}</p>
+            </div>
+        </div>
+    
+        <div *ngIf="currentTab === 3" class="grid md:grid-cols-3 gap-6 mt-8">
+            <div *ngFor="let project of jsProjects" class="bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md cursor-pointer transition transform hover:-translate-y-2 hover:bg-gray-200 hover:dark:bg-gray-700">
+                <img [src]="project.image" alt="{{ project.title }}" class="w-full h-48 object-cover rounded-md">
+                <h3 class="text-xl font-semibold mt-4 text-gray-900 dark:text-white">{{ project.title }}</h3>
+                <p class="text-gray-900 dark:text-gray-400 font-medium">{{ project.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+  
