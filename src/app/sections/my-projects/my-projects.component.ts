@@ -9,13 +9,28 @@ export class MyProjectsComponent {
   currentTab: number = 1;
 
   applicationProjects = [
-    { title: 'Web Application 1', description: 'A web application built with Angular.', image: 'assets/project1.jpg' },
-    { title: 'E-Commerce Platform', description: 'A full-stack e-commerce platform built with React and Node.js.', image: 'assets/project2.jpg' },
-    { title: 'Task Manager App', description: 'A task management app using Laravel and Vue.js.', image: 'assets/project3.jpg' },
+    { 
+        title: 'Business Permit and Licensing System', 
+        description: 'A web application built with Laravel and Angular, styled using Tailwind CSS.', 
+        image: 'assets/web_project_images/bpls.png', 
+        link: 'https://bisligcitybpls.com/' 
+    },
+    { 
+        title: 'ASCB DTR and Payroll System', 
+        description: 'A payroll and timekeeping system developed using Laravel and Angular, with a modern UI powered by Tailwind CSS.', 
+        image: 'assets/web_project_images/payroll_system.png', 
+        link: 'https://ascbdtrandpayrollsystem.com/' 
+    },
+    { 
+        title: 'Bislig City Car Rental', 
+        description: 'A car rental management platform built with Laravel and Angular, featuring a responsive Tailwind CSS design.', 
+        image: 'assets/web_project_images/car_rental.png', 
+        link: 'https://bisligcitycarrental.com/' 
+    }
   ];
 
   miniCSSProjects = [
-    { title: 'Portfolio Page', description: 'A simple CSS portfolio page.', image: 'assets/cssproject1.jpg' },
+    { title: 'Rubic\'s Cube', description: 'A simple CSS portfolio page.', image: 'assets/css_images/rubics.png' },
     { title: 'Landing Page', description: 'A responsive landing page built with CSS Grid and Flexbox.', image: 'assets/cssproject2.jpg' },
     { title: 'Blog Layout', description: 'A blog layout with CSS animations.', image: 'assets/cssproject3.jpg' },
   ];
